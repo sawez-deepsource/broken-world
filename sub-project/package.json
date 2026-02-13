@@ -1,0 +1,11 @@
+{
+  "name": "broken-sub-project",
+  "version": "1.0.0",
+  "eslintConfig": {
+    "extends": ["plugin:react/recommended", "plugin:vue/recommended"],
+    "rules": {
+      "fake-rule-in-pkg-json": "error",
+      "no-var": "warn"
+    }
+  }
+}

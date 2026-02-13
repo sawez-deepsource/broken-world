@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "plugin:nonexistent-plugin/recommended",
+    "some-config-that-doesnt-exist"
+  ],
+  "plugins": ["nonexistent-plugin", "another-fake-plugin"],
+  "rules": {
+    "no-var": "error",
+    "eqeqeq": "error",
+    "no-eval": "error",
+    "nonexistent-plugin/fake-rule": "error",
+    "another-fake-plugin/also-fake": "warn",
+    "not-a-real-rule": "error",
+    "no-unused-vars": ["error", { "invalidOption": true, "argsIgnorePattern": "^_" }],
+    "semi": ["error", "invalid-option-value"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2024": true
+  },
+  "globals": {
+    "myGlobal": "readonly"
+  }
+}
