@@ -27,3 +27,28 @@ debugger; // no-debugger
 const re2 = new RegExp("abc"); // prefer-regex-literals
 
 export { a, b, c, val };
+
+// === v3 DIFF TEST — new code below ===
+
+// no-new-wrappers
+const wrappedNum = new Number(100);
+
+// prefer-template
+function formatUser(name: string, age: number): string {
+    return "Name: " + name + ", Age: " + age;
+}
+
+// no-useless-concat
+const label = "key" + "=" + "value";
+
+// no-throw-literal
+function failHard() {
+    throw "fatal error occurred";
+}
+
+// no-alert
+function notifyUser(msg: string) {
+    alert(msg);
+}
+
+export { wrappedNum, formatUser, label, failHard, notifyUser };
